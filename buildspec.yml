@@ -12,7 +12,8 @@ phases:
     build:
         commands:
             - echo "we are in the build block"
-            - zip -r folder1.zip /folder1
+            - zip -r folder1.zip folder1
+            - zip -r folder1.zip folder1/
     post_build:
         commands:
             - echo "we are in the post build phase"
