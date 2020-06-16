@@ -12,11 +12,11 @@ phases:
     build:
         commands:
             - echo "we are in the build block"
-            - echo "we will run some tests"
+            - touch english.zip
     post_build:
         commands:
             - echo "we are in the post build phase"
 artifacts:
     files:
-      - '**/*'
+      - '**/*.zip'
     
