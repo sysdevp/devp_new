@@ -1,22 +1,17 @@
 version: 0.2
 
 phases: 
-    install:
-        runtime-versions:
-            nodejs: 10
-        commands:
-            - yum install zip -y
+
     pre_build:
         commands: 
-            - echo "we are in the pre build phase"
+            - echo "Starting"
     build:
         commands:
-            - echo "we are in the build block"
-            - zip -r folder1.zip folder1
-            - zip -r folder1.zip folder1/
+            - zip -r folder2.zip folder2
+         
     post_build:
         commands:
-            - echo "we are in the post build phase"
+            - echo "Success"
 artifacts:
     files:
       - '**/*.zip'
